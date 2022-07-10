@@ -1,0 +1,128 @@
+React Redux
+
+
+
+Step 1.   install external libraries=> redux , react-redux , redux-thunk by Command
+
+          npm i redux react-redux redux-thunk
+
+step 2. Make folder named "state" inside of "src" folder.
+
+step 3. Make folder named "action-creator" and "reducers" inside of "state" folder.
+
+step 4. Create index.js in folder "action-creator".
+
+step 5. create task which we have to do using function. If we have no. of task we will create no. of functions
+        and with creation we also export the functions. Then after in return of that function we call dispatch 
+        function. last we create its type to task so that it can be differentiate after.
+       
+             Like:        export const depositMoney = (amount) => {
+                              return (dispatch)=>{
+                                 dispatch({
+                                       type:"deposit",
+                                       payload: amount
+                                  })
+                                }
+                              }
+
+step 6. Create amountReducers into "reducers" folder.
+
+step 7. Here according to task we create reducer funtion where in parameter, we use state and action, 
+        but initially state would be 0. then we can get the action and according to that action we can define
+        what to do. using if-else or using switch-case.
+
+             Like        const reducer = (state=0, action) => {
+                                switch(action.type){
+                                    case "deposit" : return state+action.payload ;
+                                    case "withdraw" : return state-action.payload ;
+                                    default : return state;
+                                 }
+                              }
+                                 
+step 8. Here we will make another file index.js which can get all reducers and combine them into one reducer.
+        this can be done by importing combineReducers from redux and importing all reducers.
+
+            Like           import { combineReducers } from "redux";
+			   import amountReducer from "./amountReducer";
+
+				const reducers = combineReducers({
+			        amount: amountReducer
+			    })
+
+			    export default reducers; 
+
+   Note if we want to store multiple reducers then we can increament reducers by writing this with ",".
+           Like   for above example amount =  amountReducer , etc.
+
+step 9. we will create index.js into "state" folder (Root Folder of action-creator folder and reducer folder)
+        here we write code to call actions from actions-creator from one place. the code is below-
+
+        like               export * as actionCreators from "./action-creator/index"
+
+step 10. we will create a store.js into "state" folder (root folder of action-creator folder and reducer folder)
+         here we will create store function same as below and pass reducers, intial state which is blank and
+         apply Middleware with parameter thunk into parameter of createStore.
+
+        Like           import { applyMiddleware , createStore } from "redux"
+                       import thunk from "redux-thunk"
+                       import reducers from "./reducers"
+
+                       export const store = createStore(reducers, {}, applyMiddleware(thunk))
+
+step 11. import provider and store into index.js available in src folder and wrap App component into Provider.
+          and We give an arguement Provider.
+
+          Like         import { Provider } from 'react-redux';
+                       import { store } from './state/store'
+
+                        ReactDOM.render(
+                          <React.StrictMode>
+                            <Provider store={store}>
+                               <App />
+                             </Provider> 
+                          </React.StrictMode>,
+                           document.getElementById('root')
+                          )
+ 
+
+step 12. Now we can access the state, to acces state we need useSelector Hook. who select state. To use useSelector
+         we declare it in the variable randomly with any name. We use amount variable to illustrate this. we also 
+         import useSelector in that component
+
+         This all will happen in the component in which we want change for this application we use NavBar component
+         because we need to change amount which exist in navbar component.
+        
+         Like           import { useSelector } from 'redux'
+
+                        upward of return statement we declare amount.
+                        const amount = useSelector(state => state.amount)
+
+step 13. we use useDispatch hook in the component where we want to make change on click, here we want change state
+         on click which is available in Shop.js + we import actions from index.js of state folder.
+
+         Like          import { useDispatch } from react-redux;
+                       import React from 'react'
+                       import { actionCreators } from './state/index'
+
+step 14. we use useDispatch above of return statement.
+
+        Like           const dispatch= useDispatch();
+
+step 15. we use dispatch on click of button which is declared above as const dispatch = useDispatch(); So On
+         click of button we call useDispatch.
+
+         LIKE         <button onClick={()=>{dispatch(actionCreators.withdrawMoney(100))}}
+
+step 16. we can also use bindActionCreator to bind all action. so that we don't need to write 
+         dispatch(actionCreator.withdrawMoney(100)) and in place of this we just need to write withdrawMonet(100).
+         
+         the way to bind all action is following
+  
+         1. import { bindActionCreator } from 'redux'
+         2. abover of return statement write following code :
+             const [withdrawMoney , depositeMoney] = bindActionCreator(actionCreators ,dipatch);
+ 
+            here we destruct the action and make it equal to bindActionCreator
+         3. Now just replace dispatch(actionCreator.withdrawMoney(100)) with withdrawMonet(100).
+   
+         Like      <button onClick={()=>{withdrawMonet(100)}}

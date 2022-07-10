@@ -1,0 +1,26 @@
+Step 1. cloning in the repo.
+ 
+Step 2. Inside Project cd.
+
+Step 3. check the branch.
+
+Step 4. comes to branch from where I have to make new branch like-
+  
+   git checkout develop 
+
+Step 5. create new branmch
+
+   git checkout -b new_branch_name existing_branch_name
+
+Step 6. git add .
+
+7. git status
+
+8. git pull origin new_branch_name
+
+9. git commit -m "message"
+
+
+
+
+

@@ -1,0 +1,290 @@
+1. Break statement - used to end up the loop  
+                                              For e.g.->   let text = "";
+								  			        		for (let i = 0; i < 10; i++) {
+  								 					          if (i === 3) { break; }
+							           					    text += "The number is " + i + "<br>";  }
+
+      In above Example, the loop will close when i = 3, means it won't run when i become 4and so on. 
+===========================================================================================================
+
+2. Continue Statement - used to end the loop for particular condition. 
+                                              For e.g. ->   let text = "";
+													         for (let i = 0; i < 10; i++) {
+													              if (i === 3) { continue; }
+      													     text += "The number is " + i + "<br>";   }
+
+      In above Example, the loop will not run for i = 3, means it won't run when i become 3 and it will 
+      run for i - 4 and so on.
+===========================================================================================================   
+3. i> (For-in) Loop => It uses in iteration in object. 
+                                            Like          Obj={
+												            name: "utsav"
+          											        course : "b.tech" }
+
+													      for (let key in Obj){
+												            console.log(Obj[key})     }
+
+     In above Example, key is Iterator in Obj because name and course is key of the Object. 
+   _____________________________________________________________________________________________
+   ii> We can also use it for a String. 
+                                            Like         var Name = "Utsav"
+                                                         for (let char in Name){
+												            console.log(Obj[char})     }
+       In above Example, char is Iterator which iterate to length of string.
+==========================================================================================================
+4. (For-of) loop => we can use it anywhere expect of object           
+                                                         var Name = "Utsav"
+                                                         for (let char of Name){
+												            console.log(char)     }
+
+    In above Example, char is Iterator for Name and we can also use it when we have array.
+
+=========================================================================================================
+5. Data Types=>   i> Primitive =>  String , Number, Boolean, Null , Undefine  
+                  <ii> Referance Data Type=> Array, Object, Function, Date
+
+=========================================================================================================
+6. set methods => this method is used to remove duplicate value from an arrar and its value will store as 
+                  object. For e.g.
+
+					let marray = [1,2,3 4,2 1,5,4];
+					let setnew = new Set(marray);
+				-------------------------------------------------
+   console.log(marray); 	// Output: [1,2,3 4,2 1,5,4]    |  
+   console.log(setnew);  	// Output: {1,2,3,4,5}          |doc.write(setnew);  // Output: {object Set} |
+		-------------------------------------------------------------------------------------------------
+
+                ** To display the length, we use size in place of length like : 
+                                      
+                                      for above example - setnew.size   (only in set case)
+
+      ---------------------------------------------------------------------------------------------------
+
+         ** for-each Method : always use for set method, it iterate for set size for above example: 
+                               
+                                       setnew.forEach (function (value){
+                                        console.log(value) } );       
+                                                                 // value contain all items present in setnew.
+      ---------------------------------------------------------------------------------------------------
+
+         ** value methos :    always use for set method, it print the value in set.
+                             
+                          for e.g. in setnew  console.log(setnew.value);     
+                                                             
+                                                     // it will print the exact value present in setnew.
+                                                        hence it also print {object Set}
+      ---------------------------------------------------------------------------------------------------
+         ** set is unordered so it can't get the item using index no. for above e.g.
+                    
+                      console.log(setnew[2])                                  
+                                              
+                                                     // will print undefined as output
+=============================================================================================================
+7. match method : it match the words with words present in string 
+                                           
+                                           For e.g :                 var str= "sky"
+											                         const word = str.match(/[aeiou]/g)
+											                         if(word == null)
+											                         	{ console.log(null) }
+											                         else
+											                            {console.log(word.length)}
+  
+=============================================================================================================
+8. Callback method : the function passed in another function as argument of it. called callback. 
+                                             
+                                                  For e.g.          function a() {
+															           console.log("abc") }
+
+														            function b(a){
+															           a() } 
+
+														           b(a);	// will print console.log("abc")
+
+=============================================================================================================
+9. Callback hell method : is like nested callback in which function called inside of function for many time.
+                          basically here every callback function takes previous result as arguments. It that 
+                          case code look like a pyramid and difficult to read and if any function's result got 
+                          incorrect there is a possibility whole function's result got incorrect after that 
+                          spicific function if it depend upon previous result.
+ 					
+														    function a(){
+															console.log("abc");
+															function b(){
+ 															  console.log("bye") }
+															b() }
+                                        
+                                                             							     a();
+=============================================================================================================
+10. What is primitive data type and non- primitive data type?
+    primitive data type are those which can't be divide into other data type like int , string - it can't be 
+    divide further. non- orimitive data type are thos which can be divide into other data type. like array - 
+    it can be divide further.
+
+=============================================================================================================
+
+11. What is key props?
+   
+    1) key prop is used to distinguish the items of array as if changes occured it won't confuse by other 
+       items present in the list.
+    2) It has time comlexity of 1 so that searching in the array is fast   
+    3)it is easy to use. 
+
+=============================================================================================================
+
+12. What is AJAX ?
+
+    AJAX is a Asynchonous javascript and XML, is a web development technique which helps to create higly 
+    responsive to make user's experience like user uses desktop software. Suppose user wants to perform some 
+    action on click of button then the action will fetch the data from server and get that data on screen 
+    without loading of webpage.
+
+=============================================================================================================
+13. What is Asynchronous Javascript?
+    previously Javascript uses sychronous data handling means execution of code happen line by line and if 
+    some part of code takes time to execute other code have to wait for completion of that code, but in modern 
+    javascript we have a technic of asynchronous javscript which no need to wait for a code to execute the 
+    previos code. latest code can complete its execution before previous code execution. 
+
+=============================================================================================================
+
+ 14. What is Promise ?
+
+	Promise is object which represent eventually completion or failure of async operation . It is used to 
+    handle async opartion in javascipt. they are easy to manage when dealing with many async operations
+    where callback can create callback hell to manage the code.
+
+============================================================================================================
+
+15) what is web pack?
+
+
+============================================================================================================
+16) what is async Function ?
+
+   Async Function is function which returns Promise.
+============================================================================================================
+17) If we have Promise then why do we need Async Function?
+
+    we need async function because in promise everytime we do need to declare two function resolved and reject
+    and on calling of then and catch mathod get call, promise has this complicaton and Async function got 
+    introduce to get rid of this complication. Because if we have to make function we only need to write 
+    async infront of function 
+
+============================================================================================================
+ 18) What is Event Loop?
+
+============================================================================================================
+19) WHat are Objects?
+
+      Objects are the collection of any named value wheather it it primitive or non-primitive.
+
+===========================================================================================================
+
+20) ways to create object?
+
+      there are 4 ways to create an object.
+
+      i) Object Literal
+      ii) new Object or contructor
+      iii) object.create(method Name or can say function) // called as object.create Method
+      iv) class
+
+==========================================================================================================
+
+21) feature of es6? list 5?
+
+    i) Destructuring
+    ii) spread and rest operator
+    iii) map function
+    iv) promises
+    v) for/of loop
+    vi) set function
+    vii)arrow function
+    viii) const variable
+    ix) let variable
+
+=========================================================================================================
+
+22) variable hoisting?
+   
+    variable hoisting allow us to use the variable name without initialising it.
+
+
+Note: using of variable hoisting makes availibity of variable but it value would be undefined, For Eg
+
+     console.log(a);
+
+     var a =10;
+
+This will print a = undefined because variable hosting takes var a to top but its defination of 10 will 
+not go to Top.
+
+=========================================================================================================  
+
+23) how to identify the data that coming is in form of array or not?
+
+    we can use (array name).isArray() method to check the data is of array or not. 
+            like - ary.isArray();
+
+    it return only true or false.
+
+=======================================================================================================
+
+24) 0+'6'-'a'
+
+       output will be Nan
+
+=======================================================================================================
+
+25) '1'+2+3
+
+       output will be '123'
+
+======================================================================================================
+
+26) 1+2+'3'
+    
+        output will be '33'
+
+=====================================================================================================
+
+27) Regular Expression
+
+====================================================================================================
+
+28) Factory Function
+
+====================================================================================================
+29) Throw and Throws
+
+====================================================================================================
+
+30) Differed attribute
+
+====================================================================================================
+31) Call Method: When we have two objects and both object need to have same key, then call method comes into picture as we don't need to 
+    create funtion in both object if the function work is same for their keys of their object, here we need this keyword to refer the same 
+    object and call method works like objectname in which the function exist plus . and function name as key the .call (2nd function name)
+    here by this can be replace by 2nd Object. Here we can get the addition information by passing it to argument Individually.
+    
+=====================================================================================================================================
+
+32. Apply Method: We can Pass the addition argument to the function by making it as array but In case of call method we can pass the more
+    argumenrt individually to function and we can get the array value by parameter.
+    
+======================================================================================================================================
+
+33. Bind Function : 
+    
+    
+
+
+
+
+
+
+
+
+                                                                      
+                                                                                 
+   

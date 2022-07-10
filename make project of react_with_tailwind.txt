@@ -1,0 +1,59 @@
+Steps for deploying react wit tailwind
+
+1. make react project with command => npx create-react-app demo
+
+2. after react installation go to that directory and inside of it copy paste command =>
+
+    npm install -D tailwindcss@npm:@tailwindcss/postcss7-compat postcss@^7 autoprefixer@^9
+
+3. install cracko with command =>
+
+    npm install @craco/craco
+
+4. copy the following script =>
+
+     "start": "craco start",
+     "build": "craco build",
+     "test": "craco test",
+
+     in place of =>
+
+     "start": "react-scripts start",
+     "build": "react-scripts build",
+     "test": "react-scripts test",
+
+5. make a new file in project folder and paste following text as file name =>
+
+     craco.config.js
+
+6. In that file paste following code. =>
+
+   module.exports = {
+  style: {
+    postcss: {
+      plugins: [
+        require('tailwindcss'),
+        require('autoprefixer'),
+      ],
+    },
+  },
+}
+
+
+7. generate a config file of tailwind project by writing following command =>
+
+   npx tailwindcss-cli@latest init
+
+8. edit the purge file in config file of tailwind project with following code =>
+
+   purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
+
+9. replace (index.css)'s code with following code =>
+
+   @tailwind base;
+   @tailwind components;
+   @tailwind utilities; 
+
+     
+
+

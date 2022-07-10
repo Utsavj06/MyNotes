@@ -1,0 +1,56 @@
+1. import following Files as
+
+   import {Routes, Route} from "react-router-dom"
+
+2. Put the components in Routes Like
+
+   <div className="App">
+    <Header />
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/Disney-clone" element={<Home />} />
+      <Route path="/detail" element={<Detail />} />
+    </Routes> 
+    </div>
+
+3. import  BrowserRouter in Index.js Like
+
+    import { BrowserRouter } from "react-router-dom";
+
+4. Enclose App component in Index.js Like   
+
+    <BrowserRouter>
+    <Provider store={store}>
+      <App />
+    </Provider>
+  </BrowserRouter>,
+
+  Note : If we Don't have Redux then Ignore Provider and write as
+   
+    <BrowserRouter>
+      <App />
+  </BrowserRouter>,
+
+Note : This will work with typed Link if We want on click then do following
+
+5. Create another component called Navbar in which the code link :-
+
+
+            <div className={hamburgger ? "mymenu mymenu-mobile":"mymenu"} onClick={()=>setHamburgger(false)}>
+                <Link exact to="/">Home</Link>
+                <Link exact to="/disney-clone">Disney Clone</Link>
+                <Link exact to="/detail">Details</Link>
+            </div>
+
+6. Import that component to App.js at top of that component Like
+
+    <div className="App">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/Disney-clone" element={<Home />} />
+          <Route path="/detail" element={<Detail />} />
+        </Routes> 
+    </div>
+
+    

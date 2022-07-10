@@ -1,0 +1,20 @@
+1. add project to github as we did from start =>
+
+2. copy the following homepage code in package.json file of project =>
+
+      Note=> below link will replace with 
+
+      "homepage": "http://Utsavj06.github.io/project_name",
+
+3. install github pages on project with command =>
+
+       npm install --save gh-pages     
+
+4. copy the following code in package.json file of project folder.
+
+       "predeploy": "npm run build",
+       "deploy": "gh-pages -d build",
+
+5. Then run following command =>
+
+       npm run deploy

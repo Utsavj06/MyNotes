@@ -1,0 +1,41 @@
+1. Make a file style.ts
+
+2. In that file import makeStyle like
+ 
+    import {makeStyle} from '@mui/styles'
+
+3. create any names variable which is equal to makeStyles and export it like
+ 
+   export const commonStyles = makeStyles()
+
+4. Inside parameter of makeStyles create an object like
+
+   export const commonStyles = makeStyles({})
+
+5. Add key value pair in the object where key is some variable and its value
+   is the css same as we want, like.
+
+   export const commonStyles = makeStyles({
+       Container:{
+           backgroundColor:"green",
+           height:"200px",
+           etc.
+       }
+   })
+
+6. go to file where we want styling.
+
+7. import the key of the variable made by we which is equal to makeStyles, like
+
+   import {commonStyles} from './styles}
+
+8. intialise any variable which is equal to commonStyles function, like
+
+   const commonCss = commonStyles();
+
+9. put the className to any div where we want styling with dot(.)
+   and key name of the object, like
+
+   <div className={`${commonCss.Container}`}> 
+
+      

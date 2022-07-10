@@ -1,0 +1,15 @@
+if(message.toUpperCase()==message && message.toUpperCase !== message.toLowerCase && message.charAt(message.length-1)!=="?" && message.charCodeAt(0)>=65 || message.charCodeAt(0)>=48 && message.charCodeAt(0)<=57 && message.charAt(message.length-1)=="!"){
+  return "Whoa, chill out!"
+}
+  else if(message.charAt(message.length-1)=="?" && message.toUpperCase()==message && message.charCodeAt(0)>=65 ){
+    return "Calm down, I know what I'm doing!";
+  }
+    else if( message.charAt(message.length-1)=="?" ||  message.includes("spacebar")==true){ 
+      return "Sure."
+    }
+      else if( message.replace(/\t/g , "").length==0 || message.replace(/\n\r \t/g , "").length==0 || message.replace(/          /g , "").length==0){
+        return "Fine. Be that way!";
+      }
+  else {
+    return "Whatever."
+  }

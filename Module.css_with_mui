@@ -1,0 +1,12 @@
+1 . Create a global file same level of App.tsx called below =>
+    
+      global.d.tsx
+
+2. Write following code in above ts file as
+
+     declare module "*.module.css";
+     declare module "*.module.scss";
+
+3. save the file.
+
+4. Now you can use Style.module.css
