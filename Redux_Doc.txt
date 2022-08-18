@@ -2,7 +2,7 @@ React Redux
 
 
 
-Step 1.   install external libraries=> redux , react-redux , redux-thunk by Command
+Step 1. install external libraries=> redux , react-redux , redux-thunk by Command
 
           npm i redux react-redux redux-thunk
 

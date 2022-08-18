@@ -1,11 +1,12 @@
 1. what is styled components in react?
 
-=>     React only focuses UI means if we need some other functionality we need to install some other Library. Styled 
-       Component is a Library which is used to get styled the component.
+=>     React only focuses UI means if we need some other functionality we need to install some other 
+       Library. Styled Component is a Library which is used to get styled the component.
 
 2. useState ka variable kha use hta h?
 
-=>  wo variable hai or uske sath function hai jo bs uski state change krta hai us variable ko khi b use kr skte?
+=>  wo variable hai or uske sath function hai jo bs uski state change krta hai us variable ko khi b 
+    use kr skte?
 
 3. react ka version
 
@@ -25,12 +26,15 @@
 
 7. what is root in react?
 
-=> root is id name of div tag where we render our project of react and react is one-page application so all thing is render at that one div called root
+=> root is id name of div tag where we render our project of react and react is one-page application 
+   so all thing is render at that one div called root
 
 8. what id root portal in react?
 
-=> since react is one page application , sometime we need to render the components in other page and react portal is helping us to do  and root-portal 
-   is name of that portal. when sometime we need Component to be Render on div other than root div. It called by calling createPortal from react dom object.
+=> since react is one page application , sometime we need to render the components in other page and 
+   react portal is helping us to do  and root-portal is name of that portal. when sometime we need 
+   Component to be Render on div other than root div. It called by calling createPortal from react 
+   dom object.
 
 9. Dom
 
@@ -52,31 +56,36 @@
 
 13. disadvantages of react ?
 
-=>  1. react has complex structure of write the code so that beginner will face difficulty to understand its structure.
+=>  1. react has complex structure of write the code so that beginner will face difficulty to 
+       understand its structure.
     2. react is simple library and not complete framework hence it call for dependencies. 
 
 14. what is npm ?
 
-=>  npm is the node package manager which is open source package and it contains over 8 lacks code packages. if some develeper wants 
-    that code developer can install that pachage by npm install package name.
+=>  npm is the node package manager which is open source package and it contains over 8 lacks code 
+    packages. if some develeper wants that code developer can install that pachage by npm install 
+    package name.
 
 15. if we delete npm, can we get it back?
 =>  we can get it by writing command , npm install or npm i     
 
 16. if we delete package.json, can we get it back ?
-=>  we right command in console of npm init but we can't delete package.json file as it covers all details of project like dependencied
-    if we delete package.json file it is about impossible to get all details about the project to new developer.
+=>  we right command in console of npm init but we can't delete package.json file as it covers all 
+    details of project like dependencied if we delete package.json file it is about impossible to get 
+    all details about the project to new developer.
 
 17. what is life-cycle method?
-    Basically LifeCyle Methods are usually used in Class Based Components, there are mainly many LifeCycle Mathods 
-    called 1) Constructor 2) componentDidMount 3) componentDidUpdate 4) shouldComponentUpdate 5)willComponentUpdate.
+    Basically LifeCyle Methods are usually used in Class Based Components, there are mainly many 
+    LifeCycle Mathods called 1) Constructor 2) componentDidMount 3) componentDidUpdate 
+    4) shouldComponentUpdate 5)willComponentUpdate.
 
  
 18. angular is also single page application. why do we use react in place of angular
 
-    i) React is focussed only on UI Development, if need some extra feature then we should get extra library
-    ii) Angular has many more built in functionality, Using of Angular means we have built more feature than We need which we don't want,
-        It means we should use React when we need Limited functionality.
+    i) React is focussed only on UI Development, if need some extra feature then we should get extra 
+       library
+    ii) Angular has many more built in functionality, Using of Angular means we have built more feature
+        than We need which we don't want, It means we should use React when we need Limited functionality.
     iii) Angular uses TypeScript where React uses JavaScript
     iv) When we use Angular it means we are using typescript which gets converted into javascript.
     v) Vue has more feature then react and less than Angular.
@@ -92,50 +101,56 @@
     3)Constructor function is available is class Component but not present in Functional Based Component.
 
 21) What is useMemo?
-    useMemo is a hook which return memoized value means value which is present in useMemo does not need to be recalculated.
+    useMemo is a hook which return memoized value means value which is present in useMemo does not 
+    need to be recalculated.
 
 22) what is useRef?
-    useRef is a hook which used for uncontrolled component. to get the input data from uncontrolled component.
+    useRef is a hook which used for uncontrolled component. to get the input data from uncontrolled 
+    component.
 
 23) what is Controlled and Uncontrolled Component?
-    Component which controlled by react is called Controlled Component and Uncontrolled Component is component whose input
-    field is controlled by ref or javascript not by state in react.
+    Component which controlled by react is called Controlled Component and Uncontrolled Component is 
+    component whose input field is controlled by ref or javascript not by state in react.
  
 24) what is useContext?
-    it is a hook, normally if we want data into other component other than component in which data is defined, we have to use prop 
-    drilling method in which we need to pass the data into middle components but using of useContext allow us to 
-    pass the data only in two above components.
+    it is a hook, normally if we want data into other component other than component in which data is 
+    defined, we have to use prop drilling method in which we need to pass the data into middle 
+    components but using of useContext allow us to pass the data only in two above components.
 
 25) what is useReducer?
-    it is a hook, which helps to manage the state, it consist two parameter which are first reducer function and initial state.
-    Here reducer function is pure function where we define what action we need to perform. useReducer hook is equal to arrar destructring
-    in which we have two element, first is current state and second is dispatch. here dispatch contain action. as per action reducer 
+    it is a hook, which helps to manage the state, it consist two parameter which are first reducer 
+    function and initial state. Here reducer function is pure function where we define what action we 
+    need to perform. useReducer hook is equal to arrar destructring in which we have two element, first
+    is current state and second is dispatch. here dispatch contain action. as per action reducer 
     function is defined. 
 
 26) what is redux?
     redux is a state management tool which uses Reducer function  to manipulate the state.
 
 27) what is Redux LifeCyle?
-    redux lifecycle consis of a action in which we get what action we have to perform and a reducer in which actions
-    are defined like how action we need to perform then last is a store where the state got save. and using of 
-    provider method by which all state will get access to all the state. Provider is defined by attribute called as
-    store which is equal to redux's store. we also have useDispatch hook in which we pass the action.
-    and a hook called useSelector to get the data from redux's store.
+    redux lifecycle consis of a action in which we get what action we have to perform and a reducer in 
+    which actions are defined like how action we need to perform then last is a store where the state 
+    got save. and using of provider method by which all state will get access to all the state. 
+    Provider is defined by attribute called as store which is equal to redux's store. we also have
+    useDispatch hook in which we pass the action and a hook called useSelector to get the data from 
+    redux's store.
 
 28) what is React-Icons?
     React Icons is also a library which consist os Icons.
 
 29) what is useEffect?
-    useEffect is a hook which call itself on redering, it consist of dependencies array which contain an array
-    of single element which is variable from useState. By this when the variable got changed useEffect will call. 
+    useEffect is a hook which call itself on redering, it consist of dependencies array which contain 
+    an array of single element which is variable from useState. By this when the variable got changed 
+    useEffect will call. 
 
 30) what is pure function ?
-    pure function is function which doesn't give any side-effect to component and give the exact output according to input.
+    pure function is function which doesn't give any side-effect to component and give the exact output
+    according to input.
 
-31) Fragement in React?
-    Normally React Component only return single element for that we need to wrap the component into single div. But single 
-    div takes space which is not needed then here the concept comes empty wrapper which only wrap all element into single 
-    element.
+31) Pure Component?
+    Pure Component like a useMemo in Functional Component. Pure Component is similar to Regular 
+    Component but only difference is it doesn't call shouldComponentUpdate method if the state is same 
+    as Previous State. It doesn't render the component.
 
 32) Wrapper Component?
     react component only return single element so to wrap the all element, wrapper component is used.
@@ -145,39 +160,44 @@
 
 
 34) Statless and stateful component?
-    Stateless component are those component whose data is not manipulated using of useState in component as their data can be manipulate 
-    by Redux or Context API but stateful component are those whose data can be manipulate using useState.
+    Stateless component are those component whose data is not manipulated using of useState in 
+    component as their data can be manipulate by Redux or Context API but stateful component are those
+    whose data can be manipulate using useState.
 
 
 35) what is useCallback? 
-    useCallback hook is like a usememo but only difference is memo allow us to not re-render the memoized value where useCallback allow
-    us to not re-render memoized funtion and memoized value means sometime we do know the output it waas previous one but react.js
-    re-render itself and value stored in cache called memoized value.
+    useCallback hook is like a usememo but only difference is memo allow us to not re-render the 
+    memoized value where useCallback allow us to not re-render memoized funtion and memoized value 
+    means sometime we do know the output it waas previous one but react.js re-render itself and value 
+    stored in cache called memoized value.
 
 
 36) what is error boundaries
-    Error Boudaries are React Component which catches JavaScript's Errors and error gets logged when some error occured in components. 
-    LifeCycle Methods of Error : i) static getDerivedStateFromError() ii)componentDidCatch(error , info)
+    Error Boudaries are React Component which catches JavaScript's Errors and error gets logged when 
+    some error occured in components. LifeCycle Methods of Error : i) static getDerivedStateFromError()
+    ii)componentDidCatch(error , info)
 
 37) what is forward Refs?
     forward Refs is functionality to get acces of ref in child component.
 
 
 38) when do we use Class based components?
-    before indroduction of hooks, we uses class Bases component to manipulate the state as function based component is like a dummy or
-    presentationl component.
+    before indroduction of hooks, we uses class Bases component to manipulate the state as function 
+    based component is like a dummy or presentationl component.
 
-39) Pure Component?
-    Pure Component is similar to Regular Component but only difference is it doesn't call shouldComponentUpdate method if the state
-    is same as It doesn't render the component.
+39) Fragement in React?
+    Normally React Component only return single element for that we need to wrap the component into 
+    single div. But single div takes space which is not needed then here the concept comes empty 
+    wrapper which only wrap all element into single element.
 
 40) How to store data in react without api.
     We can use local storage and sessional storage to save data without api.
 
 
 41) Difference between Context API and useContext?
-    normally when we use Context API, there 3 term called context, provider and consumer but because of complex structure
-    of consumer we do use useContext Hook after introduction of hook we use useContext to get data from provider.
+    normally when we use Context API, there 3 term called context, provider and consumer but because 
+    of complex structure of consumer we do use useContext Hook after introduction of hook we use 
+    useContext to get data from provider.
 
 
 42) Local Storage, Session Storage and Coockies?
@@ -190,24 +210,28 @@
     the situation in which somthing gonna happen
 
 45) What is Lazy - Loading?
-    Some Time We do have a code which makes our application heavy and in which their time Complexity is high then it takes too much time to load or it
-    is possible that our internet connection is slow, in those case we can render other Component which gets easily load in place of that using suspence
+    Some Time We do have a code which makes our application heavy and in which their time Complexity 
+    is high then it takes too much time to load or it is possible that our internet connection is slow,
+    in those case we can render other Component which gets easily load in place of that using suspence
     which uses fallback. For lazy loading we have to import lazy and suspence from react.
 
 
 46) what is suspence?
-    suspence is component in which we can pass the component as parameter which gets load while slow loading.    
+    suspence is component in which we can pass the component as parameter which gets load while slow 
+    loading.    
 
 
 47) React Code Splitting ?
-    It is a concept to split the code in two file. By this we can sperate the lazy loading file and other files.
+    It is a concept to split the code in two file. By this we can sperate the lazy loading file and 
+    other files.
 
 48) What is Bind Method in JavaScript? Why do we use it in react?
-    Bind function allow us to Bind the Object with some other Function, In class based component when we use  
+    Bind function allow us to Bind the Object with some other Function, In class based component when 
+    we use  
 
 49) What is useHistory in react-router-dom?
-    useHistory is a hook which helps us to redirect to previous Page after some perform done. it can be implement
-    using -
+    useHistory is a hook which helps us to redirect to previous Page after some perform done. it can 
+    be implement using -
 
     i) import { useHistory } from react-router-dom
     ii) inside of functional component make a const variable like: 
@@ -218,19 +242,21 @@
 
          onClick={history.goBack()}
 
-Note-1) We can also use push method in place of goBack method to reach on desired Page and here we need to desired 
-       Page link like-
+Note-1) We can also use push method in place of goBack method to reach on desired Page and here we 
+        need to desired Page link like-
 
        step i) and ii) of above is similar but iii) step got changed by push method like
 
        onClick = { ()=> history.push("/link_name")}
 
-Note-2) we use useHistory when we need to perform some task before page redirection, if we don't need to perform 
-        any other task or calculation we can use link using react-router-dom
+Note-2) we use useHistory when we need to perform some task before page redirection, if we don't need 
+        to perform any other task or calculation we can use link using react-router-dom
     
          
-50) we do have location in useHistory but why we do need to use useLocation to get the current path of Page?
- => This is because useHistory is mutuable which means it can be changed so we do use useLocation to get the current Path of Page.
+50) we do have location in useHistory but why we do need to use useLocation to get the current path of 
+    Page?
+ => This is because useHistory is mutuable which means it can be changed so we do use useLocation to 
+    get the current Path of Page.
 
 51) What is dependencies and dev dependencies. what is the need of it?
 
@@ -239,7 +265,8 @@ Note-2) we use useHistory when we need to perform some task before page redirect
 
 
 53) what is useNavigate?
- => useNavigate is a hook in react-router dom it is the alternative of useHistory to go to different page of application
+ => useNavigate is a hook in react-router dom it is the alternative of useHistory to go to different 
+    page of application
 
     Example to implement useNavigate is-
 
@@ -269,8 +296,8 @@ Note-2) we use useHistory when we need to perform some task before page redirect
 
 55) what is Index route in react-router-dom?
 
-=>  Index Route is a nested route, Sometime we do need to render a component with the same URL of Parent URL, here we do need to 
-    implement Index Route. like=>
+=>  Index Route is a nested route, Sometime we do need to render a component with the same URL of 
+    Parent URL, here we do need to implement Index Route. like=>
 
     <Route path="link" element={<Parent_Component />}
         <Route Index element={<Component_Name />} />
@@ -281,9 +308,15 @@ Note-2) we use useHistory when we need to perform some task before page redirect
 =>  there is a disadvantages of prop drilling which is
 
     i)  if want to pass the  data between more than two between components then data should be pass
-         between all between components which complex of structures which means it will be make hard 
-         to understand the code.
+        between all between components which complex of structures which means it will be make hard 
+        to understand the code.
     ii) it will makes difficult to manage the code, 
     iii) using prop drilling, we have to pass the data in component where we dont't need it.    
 
-57)  
+57)  What is Functional Component in React?
+=> Functional Component is a plain javascript pure function that accept props as argument and return a
+   React element (JSX).
+
+58) What is Class Component in React? 
+=> Class Component is a Simple Class that made up of multiple functions that add functionality to the 
+   application   
