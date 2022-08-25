@@ -1,7 +1,7 @@
 1. what is styled components in react?
 
-=>     React only focuses UI means if we need some other functionality we need to install some other 
-       Library. Styled Component is a Library which is used to get styled the component.
+=>  React only focuses UI means if we need some other functionality we need to install some other 
+    Library. Styled Component is a Library which is used to get styled the component.
 
 2. useState ka variable kha use hta h?
 
@@ -10,11 +10,11 @@
 
 3. react ka version
 
-=> 17.0.2
+=> 18.0.2
 
 4. react-dom version 
 
-=> 17.somthing
+=> 18.somthing
 
 5. what package.json consist?
 
@@ -320,3 +320,8 @@ Note-2) we use useHistory when we need to perform some task before page redirect
 58) What is Class Component in React? 
 => Class Component is a Simple Class that made up of multiple functions that add functionality to the 
    application   
+
+59) What is Immer in React?
+=> Immer is External Library which uses Immutable Data Structure which means some onject or array can't be changed, It 
+   help when we want to change some keys of an Object, Immer helps us like it only replace the old object with new Object 
+   and in new Object only specific key got change, not all object.
