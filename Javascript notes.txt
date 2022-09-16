@@ -274,7 +274,32 @@ not go to Top.
     
 ======================================================================================================================================
 
-33. Bind Function : 
+33. Bind Function : We can bind the Object Reference with function where we use this and then we can store the data and last we can use it
+    anywhere we want.
+    
+======================================================================================================================================
+
+34. Rest Api- Representation State Transfer is a Software architecture styling which describe the Interface between Sperated Components
+    ,often across Internet in Client-Server architecture.
+    
+======================================================================================================================================
+
+35. reduce method is used to accumulate the value of array in single variable.
+
+======================================================================================================================================
+
+36. debouncing => Debouncing is a Performance Increament Technique which ensure the time-comsumption of don't fire. so often to increase
+    the performance of web pages.
+    
+=======================================================================================================================================
+
+37. throutling => Throutling is technique by which the function will call itself after every interval. Only first It will call 
+    itself immediantely.
+    
+=======================================================================================================================================
+
+38. Currying => Currying is used to evalute a function with multiple arguments and converting it into sequence of function with
+    single argument        
     
     
 
