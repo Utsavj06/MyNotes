@@ -1,0 +1,31 @@
+1. install font awesome package by 
+
+npm i font-awesome
+
+2. import following to app.css
+
+import "font-awesome/css/font-awesome.min.css";
+
+3. use font awesome
+
+/* ========> */
+
+for psedo code 
+
+use following example
+
+/* 4. .languageBox::before {
+    content: "\f0dd";
+    font-family: FontAwesome;
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    width: 26%;
+    height: 94%;
+    text-align: center;
+    font-size: 16px;
+    line-height: 27px;
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(0, 38, 62, 1);
+    pointer-events: none;
+} */
