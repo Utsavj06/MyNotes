@@ -1,0 +1,105 @@
+1. install formik and yup using npm i formik and npm i yup
+
+2. make a form 
+
+3. import formik to component
+
+4. In form write name attribute to every input to 
+   differentiate between input tags.
+
+   like 
+
+   <input name="txtFirstName" type="text" id="txtFirstName" className={`${styled.formControl} ${styled.fullWidth}`} 
+         defaultValue={values.txtFirstName} onChange={handleChange} autoComplete="off" />
+
+4. call function handleSubmit on onSubmit of form.   
+
+5. then after formik handles function named handleSubmit automatically.
+
+===================================================>
+
+Now we do need yup for validation.
+
+6. Make Folder named like validation schema
+
+7. create file in folder validation schema by named index.js
+
+8. import Yup in same file. 
+ 
+     like import * Yup from 'yup'
+
+9. then write like below :-
+
+export const SignUpSchema = Yup.object({
+    txtFirstName : Yup.string().min(3).max(20).required('Your First Name Please'),
+    txtLastName : Yup.string().min(3).max(10).required('Your Last Name Please'),
+    txtCompany : Yup.string().min(3).max(25).required('Your Company Name is ?'),
+    txtAddress1: Yup.string().min(3).max(20).required('Your Address is?'),
+    ddlCountry: Yup.string().min(1).required('Select Your Country Please.'),
+    txtCity: Yup.string().min(3).max(15).required('Your City is ?'),
+    txtPostalCode: Yup.string().min(6).max(9).required('What is Your Postal Code?'),
+    txtPhone: Yup.string().min(10).max(12).required('How can We Call You?'),
+    txtLoginID: Yup.string().min(3).max(25).required('Please Enter Your Login Id.'),
+    txtEmail: Yup.string().email('Email must be in xxx@xxx.xx format').required('Enter Your Email Id?'),
+    // txtCreatePassword: Yup.string().min(8).required('Enter Password').matches(
+    //     /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/,
+    //     "Must Contain 8 Characters, One Uppercase, One Lowercase, One Number and One Special Case Character"
+    //   ),  
+})
+
+
+10. by above code txtFirstName should be string having min 3 character and max 20 Characters
+    , txtFirstName is required also by . basically those are conditions for validation of input tags
+
+11. variable name must be same as name attribute passed in input tag 
+    for example txtFirstName.
+
+12. import SignUpSchema in pages where we need validation.
+
+13. make an object for intial value like below -
+
+    const initialValues = {
+  txtFirstName: '',
+  txtLastName: '',
+  txtCompany: '',
+  txtAddress1: '',
+  ddlCountry: '',
+  txtCity:'',
+  txtPostalCode: '',
+  txtPhone: '',
+  txtLoginID: '',
+  txtEmail: '',
+  txtCreatePassword: '',
+}
+
+14. now use formik like below -
+ 
+ const {values, errors, handleChange, handleSubmit, touched} = useFormik({
+    initialValues: initialValues,
+    validationSchema: SignUpSchema,
+    onSubmit: (values, action)=>{
+      action.resetForm();
+    }
+  })
+
+15. here 
+
+    values is to get the value from form.
+    errors is to get error from form.
+    handleChange is the function for changing the value in input.
+    handleSubmit is same function as equal to onSubmit, it will handle sybmit automaticslly
+    touched is for get touch value of input - if the input value get touched user must fill
+    the input otherwise it will throw error
+
+16. write below code to get the errors on screen.
+
+<input name="txtFirstName" type="text" id="txtFirstName" className={`${styled.formControl} ${styled.fullWidth}`} 
+                           defaultValue={values.txtFirstName} onChange={handleChange} autoComplete="off" />
+                    {errors.txtFirstName && touched.txtFirstName && !values.txtFirstName ? 
+                                            <span className='text-danger error'>
+                                                {errors.txtFirstName}
+                                            </span> : 
+                                            errors.txtFirstName && touched.txtFirstName && values.txtFirstName && 
+                                            <span className='text-danger error'>
+                                                Field Must be of 3 - 20 Character
+                                            </span> }
