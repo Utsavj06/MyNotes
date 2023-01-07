@@ -60,14 +60,11 @@ step 9. we will create index.js into "state" folder (Root Folder of action-creat
         like               export * as actionCreators from "./action-creator/index"
 
 step 10. we will create a store.js into "state" folder (root folder of action-creator folder and reducer folder)
-         here we will create store function same as below and pass reducers, intial state which is blank and
-         apply Middleware with parameter thunk into parameter of createStore.
+         here we will create store function same as below and pass reducers, intial state which is blank.
 
-        Like           import { applyMiddleware , createStore } from "redux"
-                       import thunk from "redux-thunk"
-                       import reducers from "./reducers"
+        Like           import reducers from "./reducers"
 
-                       export const store = createStore(reducers, {}, applyMiddleware(thunk))
+                       export const store = createStore(reducers)
 
 step 11. import provider and store into index.js available in src folder and wrap App component into Provider.
           and We give an arguement Provider.
